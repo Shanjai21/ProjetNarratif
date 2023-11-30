@@ -1,15 +1,18 @@
-﻿namespace ProjetNarratif.Rooms
+﻿using System.Diagnostics;
+
+namespace ProjetNarratif.Rooms
 {
     internal class Bedroom : Room
     {
         internal override string CreateDescription() =>
-@"Tu es dans ta chambre à dormir.
-La [porte] qui mène au salon est devant toi.
+@"Tu es reveillé dans une chambre tu ne c'est pas où tu es. Ton but est de sortir de cette salle.
+La [porte] qui mène au couloir est devant toi.
 Ta [toilette] privée est à ta gauche.
 Dans ton armoire, tu aperçois le [grenier]
 ";
 
         internal override void  ReceiveChoice(string choice)
+
         {
             switch (choice)
             {
@@ -25,7 +28,7 @@ Dans ton armoire, tu aperçois le [grenier]
                     else
                     {
                         Console.WriteLine("Tu ouvres la porte avec ta clé et tu sors de ta chambre.");
-                        Game.Finish();
+                        Game.Transition<Salon>();
                     }
                     break;
                 case "grenier":
@@ -35,6 +38,8 @@ Dans ton armoire, tu aperçois le [grenier]
                 default:
                     Console.WriteLine("Commande invalide.");
                     break;
+
+
             }
         }
     }

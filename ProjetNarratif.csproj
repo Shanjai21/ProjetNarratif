@@ -7,4 +7,12 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <EditorConfigFiles Remove="C:\Users\Shanjai PC\OneDrive\Desktop\ProjetNarratif\Rooms\.editorconfig" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="C:\Users\Shanjai PC\OneDrive\Desktop\ProjetNarratif\Rooms\.editorconfig" />
+  </ItemGroup>
+
 </Project>

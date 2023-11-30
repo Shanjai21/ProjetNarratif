@@ -1,11 +1,15 @@
-﻿namespace ProjetNarratif.Rooms
+﻿using System.Diagnostics;
+
+namespace ProjetNarratif.Rooms
 {
     internal class Bathroom : Room
     {
         internal override string CreateDescription() =>
-@"Dans la toilette, le [bain] est rempli d'eau chaude.
-Le [miroir] devant toi affiche ton visage déprimé.
-Tu peux revenir dans ta [chambre].
+@"Tu est dans le toillette, Tu vois toi même es tu ne te souvient rien de toi.
+Le [mirroir] te permet de voir ton reflet
+Le [bain] donne option de une lavage.
+La [chambre] te fait retourner à la chambre.
+La mini porte est verouillé avec un code [????]
 ";
 
         internal override void ReceiveChoice(string choice)
@@ -15,12 +19,17 @@ Tu peux revenir dans ta [chambre].
                 case "bain":
                     Console.WriteLine("Tu te laisses relaxer dans le bain.");
                     break;
-                case "miroir":
+                case "mirroir":
                     Console.WriteLine("Tu aperçois les chiffres 2314 écrits sur la brume sur le miroir.");
+                    System.Diagnostics.Process.Start(new ProcessStartInfo { FileName = "https://postimg.cc/tnbQxcbg", UseShellExecute = true });
                     break;
                 case "chambre":
                     Console.WriteLine("Tu retournes dans ta chambre.");
                     Game.Transition<Bedroom>();
+                    break;
+                case "3459":
+                    Console.WriteLine("Tu rentre dans la chambre.");
+                    Game.Transition<mini_porte>();
                     break;
                 default:
                     Console.WriteLine("Commande invalide.");
