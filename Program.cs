@@ -12,6 +12,7 @@ game.Add(new mini_porte());
 game.Add(new Office());
 game.Add(new Cuisine());
 game.Add(new Ordi());
+game.Add(new Riddle());
 
 while (!game.IsGameOver())
 {

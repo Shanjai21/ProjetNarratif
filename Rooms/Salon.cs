@@ -36,6 +36,10 @@ la [porte] pour retourner au chambre
                     Console.WriteLine("Tu rentre au chambre.");
                     Game.Transition<Bedroom>();
                     break;
+                case "Riddle":
+                    Console.WriteLine("Tu rentre au chambre.");
+                    Game.Transition<Riddle>();
+                    break;
                 default:
                     Console.WriteLine("Commande invalide.");
                     break;
