@@ -29,7 +29,7 @@ la [porte] pour retourner au chambre
 
                     break;
                 case "garage":
-                    Console.WriteLine("Tu montes dans le grenier.");
+                    Console.WriteLine("Tu montes dans le garage.");
                     Game.Transition<Garage>();
                     break;
                 case "porte":

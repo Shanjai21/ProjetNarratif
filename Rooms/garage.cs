@@ -24,7 +24,7 @@ La [porte] te retourne au couloir.
                     System.Diagnostics.Process.Start(new ProcessStartInfo { FileName = "https://www.r8talk.com/attachments/251877/", UseShellExecute = true });
                     break;
                 case "calendrier":
-                    Console.WriteLine("Tu aperçois les chiffres 34 dans le calendrier.");
+                    Console.WriteLine("Tu aperçois le chiffre 34 dans le calendrier.");
                     break;
                 case "porte":
                     Console.WriteLine("Tu retournes dans le couloir.");
